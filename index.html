@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js: Basics, Advantages, and Disadvantages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            animation: backgroundAnimation 15s linear infinite alternate;
+            background: linear-gradient(45deg, #4CAF50, #2196F3, #F44336, #FFC107);
+            background-size: 400% 400%;
+        }
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.5;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Node.js: Basics, Advantages, and Disadvantages</h1>
+        <p><strong>Node.js</strong> is an incredible runtime environment for running JavaScript on the server side. Explore its fundamentals and more:</p>
+
+        <h2>Advantages of Node.js</h2>
+        <ul>
+            <li><strong>Speed:</strong> Node.js is built on the V8 JavaScript engine, known for its speed and performance.</li>
+            <li><strong>Single Language:</strong> It allows you to use JavaScript both on the client and server, making development efficient.</li>
+            <li><strong>Scalability:</strong> Node.js is designed for building scalable network applications, ideal for real-time apps.</li>
+            <li><strong>Large Ecosystem:</strong> It has a rich ecosystem of packages and libraries available via npm.</li>
+            <li><strong>Event-Driven:</strong> Node.js is event-driven, making it suitable for handling asynchronous operations.</li>
+        </ul>
+
+        <h2>Disadvantages of Node.js</h2>
+        <ul>
+            <li><strong>Not Ideal for CPU-Intensive Tasks:</strong> Node.js is single-threaded, not suitable for CPU-bound tasks.</li>
+            <li><strong>Callback Hell:</strong> Handling asynchronous operations with callbacks can lead to complex code.</li>
+            <li><strong>Young Ecosystem:</strong> While growing rapidly, Node.js is relatively young compared to some other technologies.</li>
+        </ul>
+
+        <h2>Getting Started with Node.js</h2>
+        <p>Get started with Node.js by installing it on your system from the <a href="https://nodejs.org/">official website</a>.</p>
+        <p>Once installed, you can start writing server-side JavaScript applications!</p>
+
+        <h2>Example Code</h2>
+        <p>Here's a simple example of a Node.js server:</p>
+        <pre><code>
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello, Node.js!');
+});
+
+server.listen(3000, 'localhost', () => {
+    console.log('Server is running on http://localhost:3000');
+});
+        </code></pre>
+        <p>This code creates a basic HTTP server that responds with "Hello, Node.js!" when accessed.</p>
+
+        <h2>Conclusion</h2>
+        <p>Node.js is a versatile and powerful technology for server-side development. It offers many advantages, but it's essential to consider its limitations and choose the right tool for the job.</p>
+
+        <button onclick="alert('Node.js is Awesome!')">Click Me</button>
+    </div>
+</body>
+</html>
